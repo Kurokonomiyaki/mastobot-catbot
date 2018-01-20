@@ -1,0 +1,13 @@
+[Unit]
+Description=mastobot-catbot
+After=network.target
+
+[Service]
+Type=simple
+User=<specify user here>
+ExecStart=/usr/bin/node <path to the index.js of the catbot, e.g., /<some path>/mastobot-catbot/compiled/index.js>
+TimeoutSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
